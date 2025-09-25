@@ -1,0 +1,80 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    /* REMOVER estas linhas que tratam a imagem como background: */
+    /* background: url("../img/logo.png") no-repeat center center; */
+    /* background-size: contain; */
+    height: auto; /* Ajusta a altura automaticamente com o conteúdo */
+    padding: 40px 20px; /* Adiciona padding para espaço */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333; /* Cor do texto mais visível em fundo claro */
+    text-shadow: none; /* Remover sombra do texto se o fundo for claro */
+}
+
+/* Estilo para a nova imagem logo */
+.logo {
+    max-width: 150px; /* Tamanho da logo */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo da logo */
+    border-radius: 50%; /* Se quiser o formato circular */
+    border: 2px solid #333; /* Uma borda simples para destacar */
+}
+
+/* ===== Cabeçalho texto ===== */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50; /* Cor para o título principal */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555; /* Cor para o subtítulo */
+}
+
+/* ===== Seções ===== */
+section {
+    padding: 40px 20px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+/* ===== Lista de Projetos ===== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 15px;
+    margin-top: 30px;
+}

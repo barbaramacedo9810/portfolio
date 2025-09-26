@@ -1,91 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Portfólio - Barbara de Macedo</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Portfólio - Barbara de Macedo</title>
 
-    <!-- Fontes Google: Comic Neue e Bangers -->
-    <link
-            href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&display=swap"
-            rel="stylesheet"
-    />
+  <!-- Fontes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&display=swap"
+        rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="static/css/style.css"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/style.css"/>
 </head>
 <body>
 <div class="container">
 
-    <!-- Cabeçalho -->
-    <header class="header">
-        <div class="texto">
-            <h1 class="hq-title">Bem-vindo ao meu Portfólio</h1>
-            <p class="comic-text">Barbara de Macedo de Souza</p>
-            <p class="comic-text">
-                Positivo - Análise e Desenvolvimento de Sistemas (2º período)
-            </p>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="texto">
+      <h1 class="hq-title">Bem-vindo ao meu Portfólio</h1>
+      <p class="comic-text">Barbara de Macedo de Souza</p>
+      <p class="comic-text">UniCuritiba - Análise e Desenvolvimento de Sistemas (2º período)</p>
+    </div>
+    <div class="imagem">
+      <img src="static/img/quadrinho.png" alt="Desenho estilo quadrinho" class="comic-frame"/>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+
+    <!-- Seção Sobre mim -->
+    <section class="sobre">
+      <h2 class="hq-title">Sobre mim</h2>
+      <p class="comic-text">
+        Olá, seja bem-vindo(a)!<br/>
+        Me chamo <strong>Barbara</strong>, mais conhecida como <strong>Babi</strong>.
+        Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e criei este espaço para compartilhar
+        meus projetos e aprendizados.
+      </p>
+      <p class="comic-text">
+        Se quiser conhecer um pouco da minha trajetória e entender por que ainda estou no início da jornada, é só rolar
+        até o final da página — lá conto um pouquinho mais da minha história.
+      </p>
+      <p class="comic-text">
+        Na adolescência, eu era apaixonada por aventuras e até sonhei em ser <strong>skatista profissional</strong>
+        (quem nunca teve sonhos assim, não é?).
+        Com o tempo, descobri novos caminhos e encontrei na <strong>tecnologia</strong> a área que realmente me inspira.
+      </p>
+      <p class="comic-text">
+        Espero que este portfólio seja uma leitura leve e que, de alguma forma, inspire você também. Seja bem-vindo(a),
+        até mesmo se for apenas para deixar uma dica ou conselho para o meu crescimento profissional.
+      </p>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section class="projetos">
+      <h2 class="hq-title">Projetos</h2>
+      <div class="cards-container">
+
+        <div class="card">
+          <img src="static/img/brisa.png" alt="Brisa">
+          <h3>Brisa & Aroma</h3>
+          <p>Site de gastronomia desenvolvido em Flask para praticar front-end e back-end. Contém páginas de serviços,
+            cardápio interativo e envio de ideias pelo WhatsApp.
+            Tecnologias: Python, Flask, HTML, CSS, Bootstrap, JavaScript.</p>
+          <a href="https://github.com/barbaramacedo9810/BrisaAroma" target="_blank">Ver projeto</a>
         </div>
 
-        <div class="imagem">
-            <img
-                    src="static/img/quadrinho.png"
-                    alt="Desenho estilo quadrinho"
-                    class="comic-frame"
-            />
+        <div class="card">
+          <img src="static/img/projeto2-quadrinho.png" alt="Site responsivo">
+          <h3>Projeto 2</h3>
+          <p>Site responsivo desenvolvido em HTML, CSS e JS.</p>
+          <a href="https://github.com/seuusuario/projeto2" target="_blank">Ver projeto</a>
         </div>
-    </header>
 
-    <!-- Conteúdo Principal -->
-    <main>
+        <div class="card">
+          <img src="static/img/projeto3-quadrinho.png" alt="API Python">
+          <h3>Projeto 3</h3>
+          <p>API em Python para consulta de dados.</p>
+          <a href="https://github.com/seuusuario/projeto3" target="_blank">Ver projeto</a>
+        </div>
 
-        <!-- Seção Sobre mim -->
-        <section class="sobre">
-            <h2 class="hq-title">Sobre mim</h2>
+      </div>
+    </section>
 
-            <p class="comic-text">
-                Olá, seja bem-vindo(a)!<br/>
-                Me chamo <strong>Barbara</strong>, mais conhecida como <strong>Babi</strong>.
-                Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e criei
-                este espaço para compartilhar meus projetos e aprendizados.
-            </p>
+  </main>
 
-            <p class="comic-text">
-                Se quiser conhecer um pouco da minha trajetória e entender por que ainda estou
-                no início da jornada, é só rolar até o final da página — lá conto um pouquinho
-                mais da minha história.
-            </p>
-
-            <p class="comic-text">
-                Na adolescência, eu era apaixonada por aventuras e até sonhei em ser
-                <strong>skatista profissional</strong> (quem nunca teve sonhos assim, não é?).
-                Com o tempo, descobri novos caminhos e encontrei na <strong>tecnologia</strong>
-                a área que realmente me inspira.
-            </p>
-
-            <p class="comic-text">
-                Espero que este portfólio seja uma leitura leve e que, de alguma forma, inspire
-                você também. Seja bem-vindo(a), até mesmo se for apenas para deixar uma dica ou
-                conselho para o meu crescimento profissional.
-            </p>
-        </section>
-
-        <!-- Seção Projetos -->
-        <section class="projetos">
-            <h2 class="hq-title">Projetos</h2>
-            <ul class="comic-text">
-                <li>Projeto 1 — Sistema de cadastro</li>
-                <li>Projeto 2 — Site responsivo</li>
-                <li>Projeto 3 — API em Python</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <!-- Rodapé -->
-    <footer>
-        © 2025 - Barbara de Macedo
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    © 2025 - Barbara de Macedo
+  </footer>
 
 </div>
 </body>

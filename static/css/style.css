@@ -1,24 +1,17 @@
 /* ===== VARIÁVEIS ===== */
 :root {
-  --bg: #fdf5e6;           /* bege claro */
-  --accent: #2c3e50;       /* azul escuro */
-  --muted: #666;           /* cinza para textos secundários */
-  --lavender: #E6E6FA;     /* lilás claro */
+  --bg-primary: #F0E6D2;
+  --accent: #2c3e50;
+  --muted: #666;
+  --lavender: #E6E6FA;
   --white: #fff;
-  --peru: #CD853F;         /* marrom quente */
-  --tan: #D2B48C;          /* bege médio */
-  --border-light: #c8a97e; /* bege para bordas */
-  --border-shadow: #a07c5b; /* sombra marrom suave */
+  --peru: #CD853F;
+  --tan: #D2B48C;
+  --border-light: #c8a97e;
+  --border-shadow: #a07c5b;
   --Wheat: #F5DEB3;
-  --bg-primary: #F0E6D2;      /* bege claro */
-  --text-muted: #6B6157;      /* marrom médio */
+  --text-muted: #6B6157;
 }
-
-/* ===== IMPORTAÇÃO DE FONTES =====
-No HTML, adicione dentro do <head>:
-
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&display=swap" rel="stylesheet">
-*/
 
 /* ===== RESET ===== */
 * {
@@ -52,7 +45,6 @@ body {
 
 .header .texto {
   flex: 1;
-  text-align: left;
 }
 
 .header h1 {
@@ -66,10 +58,6 @@ body {
 .header p {
   font-size: 1.1rem;
   color: var(--muted);
-}
-
-.header .imagem {
-  flex: 0 0 auto;
 }
 
 .header .imagem img {
@@ -103,10 +91,10 @@ footer {
 
 /* ===== IMAGEM ESTILO QUADRINHO ===== */
 .comic-frame {
-  border: 6px solid var(--border-light);    /* bege suave */
+  border: 6px solid var(--border-light);
   padding: 10px;
   background: var(--Wheat);
-  box-shadow: 4px 4px 0 var(--border-shadow); /* sombra marrom suave */
+  box-shadow: 4px 4px 0 var(--border-shadow);
   display: inline-block;
   max-width: 100%;
 }
@@ -120,6 +108,66 @@ footer {
   font-family: 'Bangers', cursive;
 }
 
+/* ===== CARTÕES DE PROJETOS ===== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: var(--Wheat);
+  border: 2px solid var(--border-light);
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-family: 'Bangers', cursive;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: 'Comic Neue', cursive;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: var(--peru);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.card a:hover {
+  background-color: var(--tan);
+}
+
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   .header {
@@ -127,12 +175,17 @@ footer {
     text-align: center;
   }
 
-  .header .texto {
-    text-align: center;
-  }
-
   .header .imagem img {
     max-width: 200px;
     margin-top: 15px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
   }
 }

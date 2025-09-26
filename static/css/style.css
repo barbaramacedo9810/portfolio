@@ -1,80 +1,63 @@
-/* ===== Reset básico ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+  font-family: Lobster, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
 }
 
-/* ===== Cabeçalho ===== */
-header {
-    /* REMOVER estas linhas que tratam a imagem como background: */
-    /* background: url("../img/logo.png") no-repeat center center; */
-    /* background-size: contain; */
-    height: auto; /* Ajusta a altura automaticamente com o conteúdo */
-    padding: 40px 20px; /* Adiciona padding para espaço */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #333; /* Cor do texto mais visível em fundo claro */
-    text-shadow: none; /* Remover sombra do texto se o fundo for claro */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Estilo para a nova imagem logo */
-.logo {
-    max-width: 150px; /* Tamanho da logo */
-    height: auto;
-    margin-bottom: 20px; /* Espaço abaixo da logo */
-    border-radius: 50%; /* Se quiser o formato circular */
-    border: 2px solid #333; /* Uma borda simples para destacar */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-/* ===== Cabeçalho texto ===== */
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #2c3e50; /* Cor para o título principal */
+.header .texto {
+  flex: 1;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #555; /* Cor para o subtítulo */
+.header .texto h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2c3e50;
 }
 
-/* ===== Seções ===== */
+.header .texto p {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.header .imagem img {
+  max-width: 350px;
+  border-radius: 0; /* sem moldura */
+}
+
 section {
-    padding: 40px 20px;
+  margin-top: 40px;
 }
 
-section h2 {
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-    color: #2c3e50;
+h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
 }
 
-/* ===== Lista de Projetos ===== */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: disc;
+  padding-left: 20px;
 }
 
-ul li {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-/* ===== Rodapé ===== */
 footer {
-    background: #222;
-    color: #fff;
-    padding: 15px;
-    margin-top: 30px;
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+  margin-top: 40px;
 }

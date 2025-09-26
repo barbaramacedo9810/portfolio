@@ -1,63 +1,138 @@
-body {
-  font-family: Lobster, sans-serif;
+/* ===== VARIÁVEIS ===== */
+:root {
+  --bg: #fdf5e6;           /* bege claro */
+  --accent: #2c3e50;       /* azul escuro */
+  --muted: #666;           /* cinza para textos secundários */
+  --lavender: #E6E6FA;     /* lilás claro */
+  --white: #fff;
+  --peru: #CD853F;         /* marrom quente */
+  --tan: #D2B48C;          /* bege médio */
+  --border-light: #c8a97e; /* bege para bordas */
+  --border-shadow: #a07c5b; /* sombra marrom suave */
+  --Wheat: #F5DEB3;
+  --bg-primary: #F0E6D2;      /* bege claro */
+  --text-muted: #6B6157;      /* marrom médio */
+}
+
+/* ===== IMPORTAÇÃO DE FONTES =====
+No HTML, adicione dentro do <head>:
+
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&display=swap" rel="stylesheet">
+*/
+
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
-  color: #333;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Comic Neue', sans-serif;
+  background: var(--bg-primary);
+  color: var(--accent);
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
+/* ===== HEADER ===== */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 24px;
+  padding: 40px 0;
 }
 
 .header .texto {
   flex: 1;
+  text-align: left;
 }
 
-.header .texto h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #2c3e50;
+.header h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: var(--accent);
 }
 
-.header .texto p {
-  margin-top: 5px;
+.header p {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--muted);
+}
+
+.header .imagem {
+  flex: 0 0 auto;
 }
 
 .header .imagem img {
-  max-width: 350px;
-  border-radius: 0; /* sem moldura */
+  display: block;
+  max-width: 400px;
+  height: auto;
 }
 
+/* ===== SEÇÕES ===== */
 section {
-  margin-top: 40px;
+  margin: 40px auto;
+  max-width: 800px;
 }
 
 h2 {
-  color: #2c3e50;
-  margin-bottom: 10px;
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 15px;
 }
 
-ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
+/* ===== RODAPÉ ===== */
 footer {
+  background: #222;
+  color: var(--white);
   text-align: center;
   padding: 15px;
-  background: #222;
-  color: #fff;
   margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+/* ===== IMAGEM ESTILO QUADRINHO ===== */
+.comic-frame {
+  border: 6px solid var(--border-light);    /* bege suave */
+  padding: 10px;
+  background: var(--Wheat);
+  box-shadow: 4px 4px 0 var(--border-shadow); /* sombra marrom suave */
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* ===== CLASSES EXTRAS ===== */
+.comic-text {
+  font-family: 'Comic Neue', cursive;
+}
+
+.hq-title {
+  font-family: 'Bangers', cursive;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header .texto {
+    text-align: center;
+  }
+
+  .header .imagem img {
+    max-width: 200px;
+    margin-top: 15px;
+  }
 }

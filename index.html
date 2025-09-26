@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio - Barbara de Macedo</title>
-  <!-- Importa o CSS no caminho correto -->
-  <link rel="stylesheet" href="static/css/style.css">
+
+  <!-- Fontes Google: Comic Neue e Bangers -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
   <div class="container">
+
+    <!-- Cabeçalho -->
     <header class="header">
       <div class="texto">
-        <h1>Bem-vindo ao meu Portfólio</h1>
-        <p>Barbara de Macedo — Análise e Desenvolvimento de Sistemas</p>
+        <h1 class="hq-title">Bem-vindo ao meu Portfólio</h1>
+        <p class="comic-text">Barbara de Macedo de Souza</p>
+        <p class="comic-text">Positivo - Análise e Desenvolvimento de Sistemas (2º período)</p>
+
       </div>
 
-      <!-- Usa a imagem certa -->
       <div class="imagem">
-        <img src="static/img/minhafoto.png" alt="Desenho ilustrativo">
+        <img src="static/img/quadrinho.png" alt="Desenho estilo quadrinho" class="comic-frame" />
       </div>
     </header>
 
-    <section class="sobre">
-      <h2>Sobre mim</h2>
-      <p>Sou estudante de Análise e Desenvolvimento de Sistemas e este é meu espaço para compartilhar projetos e aprendizados.</p>
-    </section>
+    <main>
+      <!-- Seção Sobre -->
+      <section class="sobre">
+        <h2 class="hq-title">Sobre mim</h2>
+        <p class="comic-text">
+          Sou estudante de Análise e Desenvolvimento de Sistemas e este é meu espaço
+          para compartilhar projetos e aprendizados mas sou iniciante, se quiser entender como foi a minha trajetoria até aqui, rola até o final da página e irá entender o motivo pelo qual sou iniciante e um poquinho mais sobre a minha historia!
+        </p>
+      </section>
 
-    <section class="projetos">
-      <h2>Projetos</h2>
-      <ul>
-        <li>Projeto 1 - Sistema de cadastro</li>
-        <li>Projeto 2 - Site responsivo</li>
-        <li>Projeto 3 - API em Python</li>
-      </ul>
-    </section>
+      <!-- Seção Projetos -->
+      <section class="projetos">
+        <h2 class="hq-title">Projetos</h2>
+        <ul class="comic-text">
+          <li>Projeto 1 — Sistema de cadastro</li>
+          <li>Projeto 2 — Site responsivo</li>
+          <li>Projeto 3 — API em Python</li>
+        </ul>
+      </section>
+    </main>
+
   </div>
 
+  <!-- Rodapé -->
   <footer>
     © 2025 - Barbara de Macedo
   </footer>

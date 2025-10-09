@@ -72,7 +72,7 @@
         <div class="social-links">
             <a href="mailto:barbara.macedo9810@gmail.com"><i class="bi bi-envelope-fill"></i></a>
             <a href="https://github.com/barbaramacedo9810" target="_blank"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/bárbara-macedo-328418163" target="_blank"><i class="bi bi-linkedin"></i></a>
         </div>
     </div>
 
@@ -114,6 +114,50 @@
     </div>
 </section>
 
+<!-- ================= EXPERIÊNCIAS INTERATIVAS ================= -->
+
+<section class="experiences" id="experiences">
+    <h2>Experiências</h2>
+    <div class="experiences-container">
+
+        <!-- Experiência 1 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <div class="experience-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="experience-title">
+                    <h3>Estagiário</h3>
+                    <span>SESA/NII - Núcleo de Informática e Informações | Jun 2025 - Atual</span>
+                </div>
+                <div class="expand-btn"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="experience-details">
+                <p>Acompanhar e apoiar na análise de requisitos e modelagem de sistemas; construir novas funcionalidades e manutenções necessárias nos sistemas; realizar testes funcionais e unitários das funcionalidades; prover suporte a usuários esclarecendo dúvidas e identificando problemas. <strong>HTML, CSS, PHP, ScriptCase, entre outros.</strong></p>
+            </div>
+        </div>
+
+        <!-- Experiência 2 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <div class="experience-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div class="experience-title">
+                    <h3>Estagiário de Suporte Técnico</h3>
+                    <span>Mundivox Comunicações LTDA | Dez 2023 - Dez 2024</span>
+                </div>
+                <div class="expand-btn"><i class="fas fa-chevron-down"></i></div>
+            </div>
+            <div class="experience-details">
+                <p>Suporte supervisionado de auxílio técnico em redes, formatação e programação.</p>
+                <p>Acompanhamento de implantação de melhorias na engenharia de operações.</p>
+                <p>Suporte na construção de projetos sistêmicos, apoio na coleta de dados em diferentes sistemas e contribuições na melhoria de processos e automatizações.</p>
+            </div>
+        </div>
+
+
+
 <!-- ================= INTERESSES ================= -->
 
 <section class="interests" id="interests">
@@ -144,6 +188,17 @@
         });
     });
 </script>
+
+        <script>
+            const experienceCards = document.querySelectorAll('.experience-card');
+
+            experienceCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('active');
+                });
+            });
+        </script>
+
 
 </body>
 </html>

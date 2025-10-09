@@ -342,3 +342,95 @@ HABILIDADES / INTERESSES / FOOTER
     color: #fff;
     font-size: 0.9rem;
 }
+
+/* ================= EXPERIÊNCIAS INTERATIVAS ================= */
+
+.experiences {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.experiences h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.experiences-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.experience-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.experience-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.experience-title h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+.experience-title span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.expand-btn {
+    margin-left: auto;
+    font-size: 1rem;
+    color: #555;
+    transition: transform 0.3s;
+}
+
+.experience-details {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #555;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.experience-card.active .experience-details {
+    max-height: 200px; /* ajuste conforme o conteúdo */
+    padding: 10px 20px 20px 20px;
+}
+
+.experience-card.active .expand-btn {
+    transform: rotate(180deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .expand-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+

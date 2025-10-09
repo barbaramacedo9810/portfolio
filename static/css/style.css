@@ -1,291 +1,298 @@
-/* ===== VARIÁVEIS ===== */
-:root {
-    --bg-primary: #F0E6D2;
-    --accent: #2c3e50;
-    --muted: #666;
-    --white: #fff;
-    --peru: #CD853F;
-    --tan: #D2B48C;
-    --border-light: #000;
-    --border-shadow: #444;
-    --Wheat: #F5DEB3;
-    --text-muted: #333;
-}
-
-/* ===== RESET ===== */
+/* =========================
+   RESET GERAL
+========================= */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
 body {
-    font-family: 'Comic Neue', sans-serif;
-    background: var(--bg-primary);
-    color: var(--accent);
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    color: #222;
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 25px;
+/* =========================
+   HERO — IMAGEM AO LADO
+========================= */
+.hero {
+    padding: 100px 10% 60px;
+    background: #fff;
 }
 
-/* ===== HEADER ===== */
-.header {
+.hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 40px 0;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-.header .texto {
-    flex: 1;
+.hero-text {
+    text-align: right;
 }
 
-.header h1 {
-    font-family: 'Bangers', cursive;
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    color: var(--accent);
+.portfolio-title {
+    font-size: 180px;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -6px;
+    color: #000;
 }
 
-.header .imagem img {
-    max-width: 400px;
-}
-
-/* ===== SEÇÕES ===== */
-section {
-    margin: 40px auto;
-    max-width: 100%;
-}
-
-h2 {
-    font-family: 'Bangers', cursive;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--accent);
-}
-
-/* ===== RODAPÉ ===== */
-footer {
-    background: #222;
-    color: var(--white);
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: 0.95rem;
-}
-
-/* ===== ESTILO HQ ===== */
-.comic-frame {
-    border: 5px solid var(--border-light);
-    background: var(--white);
-    box-shadow: 6px 6px 0 var(--border-shadow);
-    padding: 15px;
-    border-radius: 6px;
-}
-
-.balao {
-    display: inline-block;
-    background: var(--white);
-    border: 3px solid var(--border-light);
-    border-radius: 20px;
-    padding: 12px 18px;
-    margin: 10px 0;
-    box-shadow: 3px 3px 0 var(--border-shadow);
-}
-
-/* Splash */
-.splash {
-    background: var(--Wheat);
-    border: 6px solid var(--border-light);
-    transform: rotate(-1deg);
-    box-shadow: 8px 8px 0 var(--border-shadow);
-    padding: 20px;
-    font-size: 1.3rem;
+.subtitle {
+    color: #c38f3b;
+    font-weight: 600;
+    margin-top: 30px;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
-/* ===== SOBRE MIM - QUADRINHOS ===== */
-.comic-panels {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    justify-items: stretch;
+.hero-img {
+    flex-shrink: 0;
 }
 
-.quadrinho {
-    position: relative;
-    background: var(--Wheat);
-    border: 4px solid var(--border-light);
-    box-shadow: 10px 10px 0 var(--border-shadow);
-    border-radius: 6px;
-    overflow: hidden;
-    transform: rotate(-0.5deg);
-}
-
-.quadrinho:nth-child(even) {
-    transform: rotate(1deg);
-}
-
-.quadrinho img {
-    width: 100%;
-    height: 100%;
+.character-img {
+    width: 350px;
+    border-radius: 10px;
     object-fit: cover;
-    display: block;
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
 }
 
-/* ===== BALÃO SOBRE A IMAGEM ===== */
-.sobre-balao {
-    position: absolute;
-    max-width: 40%; /* 🔹 balão nunca ocupa a caixa toda */
-    background: rgba(255, 255, 255, 0.85);
-    border: 3px solid var(--border-light);
-    border-radius: 18px;
-    padding: 10px 14px;
+.character-img:hover {
+    transform: scale(1.03);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 1024px) {
+    .portfolio-title {
+        font-size: 130px;
+        text-align: center;
+    }
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .hero-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-title {
+        font-size: 90px;
+    }
+    .character-img {
+        width: 180px;
+    }
+    .intro {
+        padding: 40px 5%;
+    }
+}
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 10%;
+    border-top: 2px solid #000;
+    gap: 40px;
+}
+
+.intro-left {
+    flex: 1 1 350px;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.foto-perfil {
+    width: 160px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.intro-info h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.intro-info span {
+    color: #c38f3b;
+}
+
+.intro-right {
+    flex: 1 1 350px;
+}
+
+.intro-right h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.intro-right p {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #c38f3b;
+    font-size: 1.6rem;
+    margin-right: 15px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+/* =========================
+   EXPERIÊNCIA
+========================= */
+.experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 40px;
+}
+
+.experience h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* =========================
+   PROJETOS — CARDS MODERNOS
+========================= */
+.projects {
+    padding: 60px 10%;
+    background: #f9f9f9;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    max-width: 350px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #c38f3b;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #000;
+}
+
+/* =========================
+   INTERESSES
+========================= */
+.interests {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.interests h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.interest-tags span {
+    display: inline-block;
+    background: #fff7e0;
+    color: #000;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    color: #fff;
     font-size: 0.9rem;
-    line-height: 1.3;
-    box-shadow: 2px 2px 0 var(--border-shadow);
-    z-index: 2;
 }
 
-/* ===== POSIÇÕES DIFERENTES ===== */
-.comic-panels .quadrinho:nth-child(1) .sobre-balao {
-    bottom: 15px;
-    left: 15px;
-}
 
-.comic-panels .quadrinho:nth-child(2) .sobre-balao {
-    top: 15px;
-    right: 15px;
-}
 
-.comic-panels .quadrinho:nth-child(3) .sobre-balao {
-    bottom: 15px;
-    right: 15px;
-}
-
-.comic-panels .quadrinho:nth-child(4) .sobre-balao {
-    top: 15px;
-    left: 15px;
-}
-
-/* ===== EXEMPLO DA SETINHA (desativada) ===== */
-/*
-.sobre-balao::before {
-    content: "";
-    position: absolute;
-    left: 30px;
-    bottom: -18px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: var(--border-light) transparent transparent transparent;
-}
-.sobre-balao::after {
-    content: "";
-    position: absolute;
-    left: 30px;
-    bottom: -16px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.85) transparent transparent transparent;
-}
-*/
-
-/* ===== CARTÕES DE PROJETOS ===== */
-.cards-container {
+.skills-icons {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.card {
-    background-color: var(--Wheat);
-    border: 3px solid var(--border-light);
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 5px 5px 0 var(--border-shadow);
-    transition: transform 0.2s;
+.skills-icons i {
+    font-size: 40px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-.card:hover {
-    transform: scale(1.05) rotate(-1deg);
+.skills-icons i:hover {
+    transform: scale(1.2);
+    /* opcional: adicionar sombra ou brilho */
+    filter: brightness(1.2);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border: 2px solid var(--border-light);
-}
-
-.card h3 {
-    font-family: 'Bangers', cursive;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-family: 'Comic Neue', cursive;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 15px;
-    background-color: var(--peru);
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--white);
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.card a:hover {
-    background-color: var(--tan);
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 1000px) {
-    .comic-panels {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .comic-panels {
-        grid-template-columns: 1fr;
-    }
-
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header .imagem img {
-        max-width: 200px;
-    }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 80%;
-    }
-
-    .sobre-balao {
-        font-size: 0.85rem;
-        max-width: 90%;
-        left: 5%;
-        right: auto;
-    }
-}

@@ -8,12 +8,19 @@ RESET GERAL
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* necessário para o flex funcionar */
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background: #fff;
     color: #222;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
     padding-top: 80px; /* espaço pra navbar fixa */
+    min-height: 100vh; /* garante altura mínima da tela */
 }
 
 /* =========================
@@ -81,16 +88,20 @@ NAVBAR
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    ```
     .nav-links.show {
-    display: flex;
-}
+        display: flex;
+    }
 
     .menu-toggle {
         display: block;
     }
-    ```
+}
 
+/* =========================
+MAIN
+========================= */
+main {
+    flex: 1; /* faz o conteúdo principal ocupar todo o espaço disponível */
 }
 
 /* =========================
@@ -180,7 +191,6 @@ INTRODUÇÃO
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 60px 10%;
-    border-top: 2px solid #000;
     gap: 40px;
 }
 
@@ -294,7 +304,7 @@ PROJETOS
 }
 
 /* =========================
-HABILIDADES / INTERESSES / FOOTER
+HABILIDADES / INTERESSES
 ========================= */
 .habilidades {
     text-align: center;
@@ -335,16 +345,21 @@ HABILIDADES / INTERESSES / FOOTER
     font-weight: 600;
 }
 
+/* =========================
+FOOTER
+========================= */
 .footer {
-    text-align: center;
-    padding: 30px;
+    width: 100%;
+    padding: 20px 0;
     background: #000;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
-/* ================= EXPERIÊNCIAS INTERATIVAS ================= */
-
+/* =========================
+EXPERIÊNCIAS INTERATIVAS
+========================= */
 .experiences {
     padding: 60px 20px;
     background-color: #f9f9f9;
@@ -413,7 +428,7 @@ HABILIDADES / INTERESSES / FOOTER
 }
 
 .experience-card.active .experience-details {
-    max-height: 200px; /* ajuste conforme o conteúdo */
+    max-height: 500px; /* Ajuste maior para experiências longas */
     padding: 10px 20px 20px 20px;
 }
 
@@ -433,4 +448,3 @@ HABILIDADES / INTERESSES / FOOTER
         margin-top: 10px;
     }
 }
-

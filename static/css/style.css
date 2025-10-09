@@ -239,8 +239,16 @@ body {
 }
 
 /* =========================
-   INTERESSES
+   HABILIDADES
 ========================= */
+
+.habilidades {
+    text-align: center;
+}
+.habilidades h2 {
+    font-weight: bold;
+}
+
 .interests {
     text-align: center;
     padding: 60px 10%;

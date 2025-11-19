@@ -9,7 +9,8 @@ RESET GERAL
 }
 
 html, body {
-    height: 100%; /* necessário para o flex funcionar */
+    height: 100%;
+    overflow-x: hidden; /* evita corte horizontal no mobile */
 }
 
 body {
@@ -20,7 +21,15 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 80px; /* espaço pra navbar fixa */
-    min-height: 100vh; /* garante altura mínima da tela */
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* =========================
@@ -92,6 +101,10 @@ NAVBAR
         display: flex;
     }
 
+    body {
+        padding-top: 65px; /* navbar menor no mobile */
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -101,7 +114,8 @@ NAVBAR
 MAIN
 ========================= */
 main {
-    flex: 1; /* faz o conteúdo principal ocupar todo o espaço disponível */
+    flex: 1;
+    width: 100%;
 }
 
 /* =========================
@@ -156,7 +170,7 @@ HERO
     transform: scale(1.03);
 }
 
-/* ===== Responsivo ===== */
+/* Responsivo HERO */
 @media (max-width: 1024px) {
     .portfolio-title {
         font-size: 130px;
@@ -178,8 +192,15 @@ HERO
     .character-img {
         width: 180px;
     }
-    .intro {
-        padding: 40px 5%;
+    .hero {
+        padding: 80px 5% 40px; /* reduzido para caber na tela */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-title {
+        font-size: 65px;
+        letter-spacing: -3px;
     }
 }
 
@@ -240,6 +261,26 @@ INTRODUÇÃO
 
 .social-links a:hover {
     color: #000;
+}
+
+/* Intro responsivo pequeno */
+@media (max-width: 480px) {
+    .intro {
+        padding: 40px 5%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .intro-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 130px;
+    }
 }
 
 /* =========================
@@ -346,18 +387,6 @@ HABILIDADES / INTERESSES
 }
 
 /* =========================
-FOOTER
-========================= */
-.footer {
-    width: 100%;
-    padding: 20px 0;
-    background: #000;
-    color: #fff;
-    font-size: 1rem;
-    text-align: center;
-}
-
-/* =========================
 EXPERIÊNCIAS INTERATIVAS
 ========================= */
 .experiences {
@@ -436,7 +465,7 @@ EXPERIÊNCIAS INTERATIVAS
     transform: rotate(180deg);
 }
 
-/* Responsividade */
+/* Responsividade das experiências */
 @media (max-width: 768px) {
     .experience-header {
         flex-direction: column;
@@ -446,5 +475,57 @@ EXPERIÊNCIAS INTERATIVAS
     .expand-btn {
         margin-left: 0;
         margin-top: 10px;
+    }
+}
+
+/* =========================
+FOOTER
+========================= */
+.footer {
+    width: 100%;
+    padding: 20px 0;
+    background: #000;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Pequenas melhorias para garantir que o footer não seja coberto */
+@media (max-width: 768px) {
+    .footer {
+        padding: 18px 10px;
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================
+UTILITÁRIOS & AJUSTES FINAIS
+========================= */
+/* Evita que elementos ultrapassem as margens em telas pequenas */
+.container-fixed {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Links e botões acessíveis */
+a, button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.05);
+}
+
+/* Pequenas responsividades extras */
+@media (max-width: 1200px) {
+    .projects, .habilidades, .intro, .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects, .habilidades, .intro, .hero {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }

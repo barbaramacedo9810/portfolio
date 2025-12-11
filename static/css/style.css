@@ -1,7 +1,4 @@
-/* =========================
-RESET GERAL
-========================= */
-
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -10,26 +7,25 @@ RESET GERAL
 
 html, body {
     height: 100%;
-    overflow-x: hidden; /* evita corte horizontal no mobile */
+    overflow-x: hidden;
 }
 
+/* ESTRUTURA PARA FOOTER NO FINAL */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: "Poppins", sans-serif;
     background: #fff;
     color: #222;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    padding-top: 80px; /* espaço pra navbar fixa */
-    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+main {
+    flex: 1;
+    width: 100%;
 }
 
 /* =========================
@@ -49,17 +45,9 @@ NAVBAR
     z-index: 1000;
 }
 
-.nav-logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #000;
-}
+.nav-logo { font-weight: 700; font-size: 1.2rem; color: #000; }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
+.nav-links { list-style: none; display: flex; gap: 25px; }
 
 .nav-links a {
     text-decoration: none;
@@ -67,20 +55,10 @@ NAVBAR
     font-weight: 500;
     transition: color 0.3s ease;
 }
+.nav-links a:hover { color: #c38f3b; }
 
-.nav-links a:hover {
-    color: #c38f3b;
-}
-
-/* ===== MENU HAMBÚRGUER ===== */
-.menu-toggle {
-    display: none;
-    font-size: 1.6rem;
-    color: #000;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+/* MENU HAMBÚRGUER */
+.menu-toggle { display: none; font-size: 1.6rem; color: #000; background: none; border: none; cursor: pointer; }
 
 @media (max-width: 768px) {
     .nav-links {
@@ -96,26 +74,8 @@ NAVBAR
         display: none;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    body {
-        padding-top: 65px; /* navbar menor no mobile */
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* =========================
-MAIN
-========================= */
-main {
-    flex: 1;
-    width: 100%;
+    .nav-links.show { display: flex; }
+    .menu-toggle { display: block; }
 }
 
 /* =========================
@@ -134,9 +94,7 @@ HERO
     flex-wrap: wrap;
 }
 
-.hero-text {
-    text-align: right;
-}
+.hero-text { text-align: right; }
 
 .portfolio-title {
     font-size: 180px;
@@ -154,9 +112,7 @@ HERO
     letter-spacing: 1px;
 }
 
-.hero-img {
-    flex-shrink: 0;
-}
+.hero-img { flex-shrink: 0; }
 
 .character-img {
     width: 350px;
@@ -165,43 +121,22 @@ HERO
     filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s ease;
 }
+.character-img:hover { transform: scale(1.03); }
 
-.character-img:hover {
-    transform: scale(1.03);
-}
-
-/* Responsivo HERO */
 @media (max-width: 1024px) {
-    .portfolio-title {
-        font-size: 130px;
-        text-align: center;
-    }
-    .hero-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .hero-text {
-        text-align: center;
-    }
+    .portfolio-title { font-size: 130px; text-align: center; }
+    .hero-content { flex-direction: column; gap: 30px; }
+    .hero-text { text-align: center; }
 }
 
 @media (max-width: 768px) {
-    .portfolio-title {
-        font-size: 90px;
-    }
-    .character-img {
-        width: 180px;
-    }
-    .hero {
-        padding: 80px 5% 40px; /* reduzido para caber na tela */
-    }
+    .portfolio-title { font-size: 90px; }
+    .character-img { width: 180px; }
+    .hero { padding: 80px 5% 40px; }
 }
 
 @media (max-width: 480px) {
-    .portfolio-title {
-        font-size: 65px;
-        letter-spacing: -3px;
-    }
+    .portfolio-title { font-size: 65px; letter-spacing: -3px; }
 }
 
 /* =========================
@@ -215,95 +150,34 @@ INTRODUÇÃO
     gap: 40px;
 }
 
-.intro-left {
-    flex: 1 1 350px;
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
-}
+.intro-left { flex: 1 1 350px; display: flex; align-items: flex-start; gap: 25px; }
 
-.foto-perfil {
-    width: 160px;
-    border-radius: 15px;
-    object-fit: cover;
-}
+.foto-perfil { width: 160px; border-radius: 15px; object-fit: cover; }
 
-.intro-info h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-}
+.intro-info h2 { font-size: 1.8rem; font-weight: 700; }
+.intro-info span { color: #c38f3b; }
 
-.intro-info span {
-    color: #c38f3b;
-}
+.intro-right { flex: 1 1 350px; }
+.intro-right h3 { font-size: 2rem; font-weight: 700; color: #000; margin-bottom: 10px; }
+.intro-right p { margin-bottom: 15px; }
 
-.intro-right {
-    flex: 1 1 350px;
-}
+.social-links a { color: #c38f3b; font-size: 1.6rem; margin-right: 15px; transition: 0.3s ease; }
+.social-links a:hover { color: #000; }
 
-.intro-right h3 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 10px;
-}
-
-.intro-right p {
-    margin-bottom: 15px;
-}
-
-.social-links a {
-    color: #c38f3b;
-    font-size: 1.6rem;
-    margin-right: 15px;
-    transition: 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #000;
-}
-
-/* Intro responsivo pequeno */
 @media (max-width: 480px) {
-    .intro {
-        padding: 40px 5%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .intro-left {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .foto-perfil {
-        width: 130px;
-    }
+    .intro { padding: 40px 5%; flex-direction: column; align-items: center; text-align: center; }
+    .intro-left { flex-direction: column; align-items: center; text-align: center; }
+    .foto-perfil { width: 130px; }
 }
 
 /* =========================
 PROJETOS
 ========================= */
-.projects {
-    padding: 60px 10%;
-    background: #f9f9f9;
-}
+.projects { padding: 60px 10%; background: #f9f9f9; }
 
-.projects h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-}
+.projects h2 { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 40px; }
 
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
+.projects-container { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
 
 .project-card {
     background: #fff;
@@ -317,21 +191,10 @@ PROJETOS
     gap: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0px 8px 20px rgba(0,0,0,0.15); }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-    font-size: 1.3rem;
-    color: #000;
-}
-
-.project-card p {
-    font-size: 0.95rem;
-    color: #333;
-}
+.project-card h3 { font-size: 1.3rem; color: #000; }
+.project-card p { font-size: 0.95rem; color: #333; }
 
 .project-link {
     text-decoration: none;
@@ -339,43 +202,50 @@ PROJETOS
     font-weight: 600;
     transition: color 0.3s ease;
 }
+.project-link:hover { color: #000; }
 
-.project-link:hover {
-    color: #000;
+/* ===================================================
+   HABILIDADES + EXPERIÊNCIAS (COLUNA)
+   =================================================== */
+.skills-exp-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 60px 10%;
+    gap: 60px;
 }
 
-/* =========================
-HABILIDADES / INTERESSES
-========================= */
+/* HABILIDADES */
 .habilidades {
     text-align: center;
-    padding: 60px 10%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .skills-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .skills-icons i {
     font-size: 40px;
-    transition: transform 0.3s ease;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
+.skills-icons i:hover { transform: scale(1.15); }
 
-.skills-icons i:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
+/* SOFT SKILLS */
 .interests {
     text-align: center;
     padding: 60px 10%;
 }
-
 .interest-tags span {
     display: inline-block;
     background: #fff7e0;
@@ -386,37 +256,29 @@ HABILIDADES / INTERESSES
     font-weight: 600;
 }
 
-/* =========================
-EXPERIÊNCIAS INTERATIVAS
-========================= */
+/* EXPERIÊNCIAS */
 .experiences {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 900px;
+    padding: 20px 40px;
     text-align: center;
-}
-
-.experiences h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #333;
 }
 
 .experiences-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    width: 100%;
 }
 
 .experience-card {
     width: 100%;
-    max-width: 500px;
-    background-color: #fff;
+    background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: all 0.3s ease;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .experience-header {
@@ -433,6 +295,7 @@ EXPERIÊNCIAS INTERATIVAS
 
 .experience-title h3 {
     margin: 0;
+    font-size: 1.1rem;
     color: #007bff;
 }
 
@@ -444,8 +307,7 @@ EXPERIÊNCIAS INTERATIVAS
 .expand-btn {
     margin-left: auto;
     font-size: 1rem;
-    color: #555;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .experience-details {
@@ -457,7 +319,7 @@ EXPERIÊNCIAS INTERATIVAS
 }
 
 .experience-card.active .experience-details {
-    max-height: 500px; /* Ajuste maior para experiências longas */
+    max-height: 450px;
     padding: 10px 20px 20px 20px;
 }
 
@@ -465,13 +327,11 @@ EXPERIÊNCIAS INTERATIVAS
     transform: rotate(180deg);
 }
 
-/* Responsividade das experiências */
 @media (max-width: 768px) {
     .experience-header {
         flex-direction: column;
         align-items: flex-start;
     }
-
     .expand-btn {
         margin-left: 0;
         margin-top: 10px;
@@ -479,53 +339,65 @@ EXPERIÊNCIAS INTERATIVAS
 }
 
 /* =========================
-FOOTER
+   FOOTER
 ========================= */
 .footer {
     width: 100%;
-    padding: 20px 0;
+    padding: 22px 0;
     background: #000;
     color: #fff;
     font-size: 1rem;
     text-align: center;
+
+    /* Garante que o footer fique no fim da página */
     margin-top: auto;
 }
 
-/* Pequenas melhorias para garantir que o footer não seja coberto */
 @media (max-width: 768px) {
     .footer {
-        padding: 18px 10px;
+        padding: 20px 10px;
         font-size: 0.95rem;
     }
 }
 
+
+/* Faz o body ocupar 100% da tela e empurra o footer para o final */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 /* =========================
-UTILITÁRIOS & AJUSTES FINAIS
+UTILITÁRIOS
 ========================= */
-/* Evita que elementos ultrapassem as margens em telas pequenas */
-.container-fixed {
-    padding-left: 5%;
-    padding-right: 5%;
+.container-fixed { padding-left: 5%; padding-right: 5%; width: 100%; box-sizing: border-box; }
+a, button { -webkit-tap-highlight-color: rgba(0,0,0,0.05); }
+
+/* =========================
+PLANNER
+========================= */
+.planner-container { display: flex; flex-wrap: wrap; padding: 60px 10%; gap: 40px; align-items: center; }
+.planner-text { flex: 1 1 350px; }
+.planner-image { flex: 1 1 350px; display: flex; justify-content: center; }
+
+.planner-image img {
     width: 100%;
-    box-sizing: border-box;
+    max-width: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: top;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));
 }
 
-/* Links e botões acessíveis */
-a, button {
-    -webkit-tap-highlight-color: rgba(0,0,0,0.05);
-}
-
-/* Pequenas responsividades extras */
-@media (max-width: 1200px) {
-    .projects, .habilidades, .intro, .hero {
-        padding-left: 6%;
-        padding-right: 6%;
-    }
-}
-
-@media (max-width: 600px) {
-    .projects, .habilidades, .intro, .hero {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
+@media (max-width: 768px) {
+    .planner-container { flex-direction: column; text-align: center; }
+    .planner-image img { max-width: 380px; object-position: top; }
 }

@@ -281,11 +281,19 @@ PROJETOS
     transition: 0.3s ease;
 }
 
+/* === AJUSTE FEITO → CENTRALIZAR === */
+.experience-title {
+    text-align: center;
+    width: 100%;
+}
+
 .experience-header {
     display: flex;
     align-items: center;
     padding: 15px 20px;
 }
+
+/* ================================== */
 
 .experience-icon {
     font-size: 2rem;
@@ -330,7 +338,9 @@ PROJETOS
 @media (max-width: 768px) {
     .experience-header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
     }
     .expand-btn {
         margin-left: 0;
@@ -348,8 +358,6 @@ PROJETOS
     color: #fff;
     font-size: 1rem;
     text-align: center;
-
-    /* Garante que o footer fique no fim da página */
     margin-top: auto;
 }
 
@@ -360,8 +368,7 @@ PROJETOS
     }
 }
 
-
-/* Faz o body ocupar 100% da tela e empurra o footer para o final */
+/* Garantir altura total para empurrar footer */
 html, body {
     height: 100%;
     margin: 0;
@@ -374,7 +381,6 @@ body {
     min-height: 100vh;
 }
 
-
 /* =========================
 UTILITÁRIOS
 ========================= */
@@ -382,22 +388,36 @@ UTILITÁRIOS
 a, button { -webkit-tap-highlight-color: rgba(0,0,0,0.05); }
 
 /* =========================
-PLANNER
+   AJUSTES ESPECÍFICOS PARA O CARD DO PLANNER
 ========================= */
-.planner-container { display: flex; flex-wrap: wrap; padding: 60px 10%; gap: 40px; align-items: center; }
-.planner-text { flex: 1 1 350px; }
-.planner-image { flex: 1 1 350px; display: flex; justify-content: center; }
 
-.planner-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 15px;
-    object-fit: cover;
-    object-position: top;
-    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.15));
+.project-card.planner-card {
+    padding: 18px;
+    gap: 10px;
 }
 
-@media (max-width: 768px) {
-    .planner-container { flex-direction: column; text-align: center; }
-    .planner-image img { max-width: 380px; object-position: top; }
+.project-card.planner-card h3 {
+    font-size: 1.2rem;
+}
+
+.project-card.planner-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.project-card.planner-card ul {
+    margin-left: 18px;
+    margin-top: 5px;
+}
+
+.project-card.planner-card li {
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+}
+
+/* Deixa o texto interno ocupar tudo que puder dentro da altura */
+.project-card.planner-card .long-text {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
 }
